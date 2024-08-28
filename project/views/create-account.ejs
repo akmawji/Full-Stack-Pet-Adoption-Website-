@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+<div class="sidemenu">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/create-account">Create an Account</a></li>
+            <li><a href="/find-pet">Find a dog/cat</a></li>
+            <li><a href="/dog-care">Dog Care</a></li>
+            <li><a href="/cat-care">Cat Care</a></li>
+            <li><a href="/give-away">Have a pet to give away</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/logout">Log Out</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="content">
+    <section>
+        <h3>Create an Account</h3>
+        <p>Username can contain letters and digits only.</p>
+        <p>Password must be at least 4 characters long, contain at least one letter and one digit.</p>
+        <form id="createAccountForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" pattern="[A-Za-z0-9]+" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" 
+                   pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}" required>
+            <button type="submit">Create Account</button>
+        </form>
+        <div id="message"></div>
+    </section>
+</div>
+
+<%- include('partials/footer') %>
+
+<script src="/js/Q8.js"></script>

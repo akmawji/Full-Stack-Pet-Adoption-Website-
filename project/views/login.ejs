@@ -1,0 +1,33 @@
+
+<%- include('partials/header') %>
+
+    <div class="sidemenu">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/create-account">Create an Account</a></li>
+                <li><a href="/find-pet">Find a dog/cat</a></li>
+                <li><a href="/dog-care">Dog Care</a></li>
+                <li><a href="/cat-care">Cat Care</a></li>
+                <li><a href="/give-away">Have a pet to give away</a></li>
+                <li class="active"><a href="/contact">Contact Us</a></li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <form method="post" action="/login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <script src="/js/Q8.js"></script>
+</body>
+</html>

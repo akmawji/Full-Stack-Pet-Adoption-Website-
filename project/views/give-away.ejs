@@ -1,0 +1,84 @@
+
+    <%- include('partials/header') %>
+
+    <div class="sidemenu">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/create-account">Create an Account</a></li>
+                <li><a href="/find-pet">Find a dog/cat</a></li>
+                <li><a href="/dog-care">Dog Care</a></li>
+                <li><a href="/cat-care">Cat Care</a></li>
+                <li class="active"><a href="/give-away">Have a pet to give away</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <section>
+            <h3>Please fill out the following form.</h3>
+            <form id="giveform" name="giveform" action="/give-away" method="post" onsubmit="return validateForm2()">
+                <fieldset>
+                    <legend>Give away pet form</legend>
+                    <label>
+                        <input type="radio" name="type" value="Cat"> Cat
+                    </label>
+                    <label>
+                        <input type="radio" name="type" value="Dog"> Dog
+                    </label><br><br>
+                    <label>
+                        Breed of pet:
+                        <input type="text" id="breed" name="breed">
+                    </label><br><br>
+                    <label>
+                        Second breed if mixed:
+                        <input type="text" id="breedmixed" name="breedmixed">
+                    </label><br><br>
+                    <p>Animal's Gender</p>
+                    <label>
+                        <input type="radio" name="gender" value="Male"> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Female"> Female
+                    </label><br><br>
+                    <div>Pet gets along with...</div>
+                    <label>
+                        <input type="checkbox" name="otherdogs" value="yes"> other dogs
+                    </label>
+                    <label>
+                        <input type="checkbox" name="othercats" value="yes"> other cats
+                    </label>
+                    <label>
+                        <input type="checkbox" name="smallchildren" value="yes"> small children
+                    </label><br><br>
+                    <label>
+                        Tell us about your Pet:<br>
+                        <textarea id="aboutpet" name="aboutpet"></textarea>
+                    </label><br><br>
+                    <label>
+                        Current owner's first name:
+                        <input type="text" id="firstname" name="firstname">
+                    </label><br><br>
+                    <label>
+                        Current owner's last name:
+                        <input type="text" id="lastname" name="lastname">
+                    </label><br><br>
+                    <label>
+                        Email where we can reach you:
+                        <input type="email" id="email" name="email">
+                    </label><br><br>
+                    <input type="submit">
+                    <input type="reset" value="Clear">
+                </fieldset>
+            </form>
+            
+        </section>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <script src="/js/Q8.js"></script> <!-- Updated path to JS -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+ul {
+    list-style:none;
+    padding: 0px;
+}
+li a {
+    color: black;
+    display:block;
+    padding: 20px 10px;
+    text-decoration: none;
+}
+li a.active {
+    background-color: black;
+    color: white;
+}
+li a:hover:not(.active) {
+    background-color: black;
+    color: white;
+}
+.sidemenu {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top:0;
+    left:0;
+    padding-top:50px;
+    background-color: burlywood;
+}
+.header {
+    margin-left: 150px;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+.content {
+    background-color: beige;
+    margin-left: 150px;
+    padding: 10px;
+    height: auto;
+}
+.footer {
+    background-color: bisque;
+    margin-left: 150px;
+    height: auto;
+    padding:10px
+}
+body {
+    background-color:black;
+}
+footer a {
+    color:black
+}
+.pet {
+ border: 2px solid black;
+ margin: 5px;
+ padding: 5px;
+}
